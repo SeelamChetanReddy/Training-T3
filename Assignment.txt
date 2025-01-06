@@ -1,0 +1,26 @@
+What is Data Type ?
+
+It is used to define what kind of data it is 
+
+Types of data types:-
+
+1.Primitive Data Types:-
+- they are built-in
+- immutable
+- they can store only a single values
+    -string
+    -number
+    -boolean
+    -undefined
+    -null
+    -symbol
+    -bigint
+
+2.non-primtitive data types:-
+- they are user defined
+- mutable
+- they can store multiple values.
+    -array
+    -functions
+    -objects
+    -math , date , json

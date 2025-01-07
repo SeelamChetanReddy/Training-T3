@@ -1,0 +1,76 @@
+types of variables 
+var-both re-initialiazation and declaration are possible
+let-can reinitialize but not re declare
+constant-not both
+
+var username="rakesh"
+var-variable
+username-identifier
+rakesh-value/data
+
+-method to print in ui=document.writeln
+
+what is comment?
+-to give an information to the developers
+
+html=<!--comment-->
+css=/comment/
+2types
+------
+1.Single line=//
+2.Multiple line=/comment/
+
+var
+------
+var a=10;
+a=100;-->re-initialization
+console.log(a);-->100
+
+var user="m";
+var user="p";-->re-declaration
+console.log(user);-->p
+let
+------
+let a=10;
+a=100;-->re-initialization
+console.log(a);-->100
+
+var user="m";
+var user="p";-->re-declaration
+console.log(user);-->cannot re-declare
+----------
+What is datatype?
+used to specify what kind of data is stored in a variable
+types
+-----
+1.Primitive data type-non-mutable,built-in,single value
+-string
+sequence of characters enclosed within "",'',``(template literals/backtiks)
+typeof(identifier)-to recheck
+
+-number
+range=-2^53-1 to ++2^53-1
+beyond this range datatype is bigint
+
+-Boolean
+true/false
+
+-undefined
+declared but not initialized
+
+-null
+acceptable empty value,absence of an object
+typeof() return object
+
+-symbol
+
+-bigint
+any valye suffix with "n" is bigint
+eg:2n
+
+2.Non-primitive data types-mutable,user-defined,multiple values
+-objects(math,date,json)
+-arrays
+-functions
+
+

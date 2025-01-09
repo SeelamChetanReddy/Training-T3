@@ -45,7 +45,7 @@
 // }
 
 const addToCart = () => {
-    alert("Item " + + " added to cart");
+    alert("Item "  + " added to cart");
 }
 
 function add(a, b) {

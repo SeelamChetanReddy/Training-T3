@@ -86,10 +86,97 @@
 // document.body.appendChild(ele);
 // document.body.appendChild(img);
 
+// let form = document.querySelector("form");
+// let username = document.getElementById("uName");
+// let email = document.getElementById("uMail");
+// let password = document.getElementById("uPass");
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   // console.log(event);
+//   // console.log("Form submitted");
+//   let uname = username.value;
+//   let uemail = email.value;
+//   let upass = password.value;
+//   let userDetails = {
+//     uname,
+//     uemail,
+//     upass,``
+//   };
+//   console.log(userDetails);
+//   localStorage.setItem("userDetails", JSON.stringify(userDetails));
+// });
+
+
+// let video = document.createElement("video");
+// video.setAttribute("src","./2023-08-06-013501000.mp4");
+// video.setAttribute("controls","controls");
+// console.log(video);
+
+
+
+
+// document.body.appendChild(video)
+
+// let h1 = document.createElement("h1");
+// h1.innerText="Chetan Reddy";
+// document.body.appendChild(h1);
+
+// console.log(h1);
+
+
+let mainEle= document.createElement("div");
+mainEle.setAttribute("id","mainBlock");
+mainEle.style.border="5px solid red";
+mainEle.style.width="550px";
+mainEle.style.height="550px";
+console.log(mainEle);
+
+let topEle= document.createElement("div");
+mainEle.setAttribute("id","topBlock");
+// console.log(topEle);
+
+let img = document.createElement("img");
+img.src = "./Ro.jpg";
+img.style.width = "550px";
+
+
+let bottomEle= document.createElement("div");
+mainEle.setAttribute("id","bottomBlock");
+// console.log(bottomEle);
+
+
+
+let h1 = document.createElement("h1");
+h1.innerText = "Chetan Reddy";
+h1.style.textAlign="center";
+
+let btn = document.createElement("button");
+btn.innerText = "View More";
+btn.style.border="none";
+btn.style.padding="10px";
+btn.style.backgroundColor="dodgerblue";
+btn.style.color="white";
+
+bottomEle.appendChild(btn);
+bottomEle.appendChild(h1);
+topEle.appendChild(img);
+mainEle.appendChild(topEle);
+mainEle.appendChild(bottomEle);
+
+document.body.appendChild(mainEle);
+
+console.log(mainEle);
+
+
 let form = document.querySelector("form");
-let username = document.getElementById("uName");
-let email = document.getElementById("uMail");
-let password = document.getElementById("uPass");
+
+let username= document.getElementById("uName");
+let email= document.getElementById("uMail");
+let password= document.getElementById("uPass");
+
+let gender = document.getElementsByName("gender");
+console.log(gender);
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -101,7 +188,7 @@ form.addEventListener("submit", (event) => {
   let userDetails = {
     uname,
     uemail,
-    upass,``
+    upass,
   };
   console.log(userDetails);
   localStorage.setItem("userDetails", JSON.stringify(userDetails));

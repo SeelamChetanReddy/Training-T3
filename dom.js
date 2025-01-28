@@ -125,71 +125,95 @@
 // console.log(h1);
 
 
-let mainEle= document.createElement("div");
-mainEle.setAttribute("id","mainBlock");
-mainEle.style.border="5px solid red";
-mainEle.style.width="550px";
-mainEle.style.height="550px";
-console.log(mainEle);
+// let mainEle= document.createElement("div");
+// mainEle.setAttribute("id","mainBlock");
+// mainEle.style.border="5px solid red";
+// mainEle.style.width="550px";
+// mainEle.style.height="550px";
+// console.log(mainEle);
 
-let topEle= document.createElement("div");
-mainEle.setAttribute("id","topBlock");
-// console.log(topEle);
+// let topEle= document.createElement("div");
+// mainEle.setAttribute("id","topBlock");
+// // console.log(topEle);
 
-let img = document.createElement("img");
-img.src = "./Ro.jpg";
-img.style.width = "550px";
-
-
-let bottomEle= document.createElement("div");
-mainEle.setAttribute("id","bottomBlock");
-// console.log(bottomEle);
+// let img = document.createElement("img");
+// img.src = "./Ro.jpg";
+// img.style.width = "550px";
 
 
+// let bottomEle= document.createElement("div");
+// mainEle.setAttribute("id","bottomBlock");
+// // console.log(bottomEle);
 
-let h1 = document.createElement("h1");
-h1.innerText = "Chetan Reddy";
-h1.style.textAlign="center";
 
-let btn = document.createElement("button");
-btn.innerText = "View More";
-btn.style.border="none";
-btn.style.padding="10px";
-btn.style.backgroundColor="dodgerblue";
-btn.style.color="white";
 
-bottomEle.appendChild(btn);
-bottomEle.appendChild(h1);
-topEle.appendChild(img);
-mainEle.appendChild(topEle);
-mainEle.appendChild(bottomEle);
+// let h1 = document.createElement("h1");
+// h1.innerText = "Chetan Reddy";
+// h1.style.textAlign="center";
 
-document.body.appendChild(mainEle);
+// let btn = document.createElement("button");
+// btn.innerText = "View More";
+// btn.style.border="none";
+// btn.style.padding="10px";
+// btn.style.backgroundColor="dodgerblue";
+// btn.style.color="white";
 
-console.log(mainEle);
+// bottomEle.appendChild(btn);
+// bottomEle.appendChild(h1);
+// topEle.appendChild(img);
+// mainEle.appendChild(topEle);
+// mainEle.appendChild(bottomEle);
+
+// document.body.appendChild(mainEle);
+
+// console.log(mainEle);
 
 
 let form = document.querySelector("form");
 
 let username= document.getElementById("uName");
-let email= document.getElementById("uMail");
 let password= document.getElementById("uPass");
+let email= document.getElementById("check");
+let show = document.getElementById("show");
 
 let gender = document.getElementsByName("gender");
-console.log(gender);
+// console.log(gender);
 
+check.addEventListener("click", (event) => {
+  if(event.target.checked == true){
+    password.setAttribute("type" , "text");
+    show.innerText = "Hide Password";
+    }
+  else{
+    password.setAttribute("type" , "password");
+  }
+})
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   // console.log(event);
   // console.log("Form submitted");
   let uname = username.value;
-  let uemail = email.value;
   let upass = password.value;
+  let gen = "";
+  
+  
+  for(let i=0;i<gender.length-1;i++){
+      // console.log(gender[i].value);
+      if( gender[i].checked){
+        gen = gender[i
+          
+        ].value;
+      }
+  }
+
   let userDetails = {
     uname,
-    uemail,
     upass,
+    gen,
   };
   console.log(userDetails);
-  localStorage.setItem("userDetails", JSON.stringify(userDetails));
+  sessionStorage.setItem("userDetails", JSON.stringify(userDetails));
+
 });
+
+// console.log()

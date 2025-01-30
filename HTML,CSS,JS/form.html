@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+            <label>User Name</label>
+            <input type="text" name="uName" placeholder="User Name"  required/><br>
+          
+            <label>Email</label>
+            <input type="email" name="uMail" placeholder="Email"  required/><br>
+          
+            <label>Password</label>
+            <input type="password" name="uPass" placeholder="Password" /><br>
+            
+            <label>Confirm Password</label>
+            <input type="password" name="uConfirmPass" placeholder="Confirm Password" /><br>
+          
+          <button type="submit">
+            Sign Up
+          </button>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        const name= document.getElementById('uName');
+        const mail= document.getElementById('uMail');
+        const pass= document.getElementById('uPass');
+        const confirmPass= document.getElementById('uConfirmPass');
+
+        if(pass.length<=6){
+            console.log("Password length should be greater than 6");
+        }
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            console.log(name.value);
+            console.log(mail.value);
+            console.log(pass.value);
+            console.log(confirmPass.value);
+        });
+
+
+    </script>
+</body>
+</html>

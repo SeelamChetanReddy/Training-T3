@@ -7,6 +7,10 @@
   <title>Document</title>
 
   <style>
+    th,td,tr{
+      border: 1px solid black;
+      border-collapse:separate;
+    }
   </style>
 </head>
 
@@ -68,7 +72,7 @@
     </div>
   </div> -->
 
-  <form>
+  <!-- <form>
     <label for="uName">UserName : </label>
     <input type="text" placeholder="name" id="uName"><br>
     <label for="uPass">Password : </label>
@@ -80,8 +84,21 @@
     <input type="radio" name="gender" value="female">Female</input>
     <input type="radio" name="gender" value="others">Others</input><br>
     <input type="submit"><br>
-  </form>
-  <script src="dom.js"></script>
+  </form> -->
+
+  <table style="border: 3px solid black;">
+    <thead style="border: 3px solid black;">
+    <th>S.NO</th>
+    <th>Name</th>
+    
+    <th>Company</th>
+    <th>Salary</th>
+    <th>City</th>
+    <th>Area</th>
+</thead>
+<tbody id="store" style="border: 3px solid black;">
+  </tbody>
+  <script src="chetan.js"></script>
 </body>
 
 </html>

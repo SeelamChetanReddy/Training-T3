@@ -3,47 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 350px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    <form>
-            <label>User Name</label>
-            <input type="text" name="uName" placeholder="User Name"  required/><br>
-          
-            <label>Email</label>
-            <input type="email" name="uMail" placeholder="Email"  required/><br>
-          
-            <label>Password</label>
-            <input type="password" name="uPass" placeholder="Password" /><br>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="myForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <div class="error" id="usernameError"></div>
             
-            <label>Confirm Password</label>
-            <input type="password" name="uConfirmPass" placeholder="Confirm Password" /><br>
-          
-          <button type="submit">
-            Sign Up
-          </button>
-    </form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <div class="error" id="emailError"></div>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <div class="error" id="passwordError"></div>
+            
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            <div class="error" id="confirmPasswordError"></div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
     <script>
-        const form = document.querySelector('form');
-        const name= document.getElementById('uName');
-        const mail= document.getElementById('uMail');
-        const pass= document.getElementById('uPass');
-        const confirmPass= document.getElementById('uConfirmPass');
-
-        if(pass.length<=6){
-            console.log("Password length should be greater than 6");
-        }
-
-        form.addEventListener('submit', (event) => {
+        document.getElementById("myForm").addEventListener("submit", function(event) {
             event.preventDefault();
-            console.log(name.value);
-            console.log(mail.value);
-            console.log(pass.value);
-            console.log(confirmPass.value);
+            let isValid = true;
+
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            document.getElementById("usernameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("passwordError").innerText = "";
+            document.getElementById("confirmPasswordError").innerText = "";
+
+            if (username.trim() === "") {
+                document.getElementById("usernameError").innerText = "Username is required";
+                isValid = false;
+            }
+
+            if (email.trim() === "" || !email.includes("@")) {
+                document.getElementById("emailError").innerText = "Valid email is required";
+                isValid = false;
+            }
+
+            if (password.length < 6) {
+                document.getElementById("passwordError").innerText = "Password must be at least 6 characters";
+                isValid = false;
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById("confirmPasswordError").innerText = "Passwords do not match";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+            }
         });
-
-
     </script>
 </body>
 </html>

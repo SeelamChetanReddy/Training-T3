@@ -22,25 +22,69 @@
 // ! componenet composition
 
 
-import React from 'react';
-import Navbar from './components/Navbar';
-import Main from './components/Main';
-import Sidebar1 from './components/Sidebar1';
-import Sidebar2 from './components/Sidebar2';
-import Footer from './components/Footer';
+// import React from 'react';
+// import Navbar from './components/Navbar';
+// import Main from './components/Main';
+// import Sidebar1 from './components/Sidebar1';
+// import Sidebar2 from './components/Sidebar2';
+// import Footer from './components/Footer';
 
 
+// const App = () => {
+//   return (
+//     <div className='App'>
+//       <Navbar/>
+//       <Main/>
+//       <div className='sidebar'>
+//       <Sidebar1/>
+//       <Sidebar2/>
+//       </div>
+//       <Footer/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// ! props
+
+// import React,{Component} from "react";
+// import FBCPropEx from "./propsex/FBCPropEx";
+
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         {/* <CBCPropEx
+//         username = "chetan"
+//         age = {20}
+//         hobbies = {["cricket","football","basketball"]}
+//         address={{city:"Khammam",area:"allipuram"}}
+//         sendFun={function(){alert("hi i am  chetan")}}
+//         /> */}
+
+//         <FBCPropEx
+//         username = "Rushil"
+//         isMarried = {true}
+//         hobbies = {["chatting","reading","eating","sleeping"]}
+//         />
+//       </div>
+//     )
+//   }
+// }
+
+//! props children
+
+import React from 'react'
+import PropChildEx from './propsex/PropChildEx'
+import SubChild from './propsex/SubChild'
 const App = () => {
   return (
-    <div className='App'>
-      <Navbar/>
-      <Main/>
-      <div className='sidebar'>
-      <Sidebar1/>
-      <Sidebar2/>
-      </div>
-      <Footer/>
-    </div>
+    <PropChildEx num = {1000}>
+      <h1>Hi I am child</h1>
+      <SubChild/>
+    </PropChildEx>
   )
 }
 

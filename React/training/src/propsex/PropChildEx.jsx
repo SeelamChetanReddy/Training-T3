@@ -1,11 +1,14 @@
 import React from 'react'
 
-const PropChildEx = (a) => {
+const PropChildEx = (props) => {
+    console.log(props);
   return (
-    <div>{a.num}
-        <i>{
-            a.children
-        }</i>
+    <div>PropChildEx
+
+        <h1>{props.num}</h1>
+        {
+            props.children
+        }
     </div>
   )
 }

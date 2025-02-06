@@ -1,23 +1,21 @@
 import React from 'react'
 
-const FBCPropEx = (a) => {
-    console.log(a);
-    if(a.isMarried === true){
-        return (
-            <div>
-                <h1><i>{a.username} is a married person</i></h1>
-                <hr/>
-                <sup>{
-                    a.hobbies.map(hobby=>{
-                        return <li>{hobby}</li>
-                    })
-                }</sup>
-            </div>
-        
-    )}
-    else{
-        return <h1>{a.username} is not a married person</h1>
-    }
+const FBCPropEx = (props) => {
+    console.log(props);
+  if(props.isMarried== true){
+    return (
+        <div>
+            <h1>{props.username} is a married person</h1>
+            {
+                props.hobbies.map(hobby=>{
+                    return <li>{hobby}</li>
+                })
+            }
+        </div>
+    )
+  }else{
+    return <h1>Not married</h1>
+  }
 }
 
 export default FBCPropEx

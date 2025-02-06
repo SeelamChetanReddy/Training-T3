@@ -75,16 +75,36 @@
 // }
 
 //! props children
+// import React from 'react'
+// // import PropChildEx from './propsex/PropChildEx'
+// // import SubChild from './propsex/SubChild'
+// import Child1 from './propsex/Child1'
 
+// const App = () => {
+//   return (
+//     <div>
+//     app
+//       {/* <PropChildEx num={1000}>
+//         <h1>this is data coming from props children</h1>
+//         <SubChild/>
+//       </PropChildEx> */}
+//       <Child1 university="Mallareddy university"/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//! State examples
 import React from 'react'
-import PropChildEx from './propsex/PropChildEx'
-import SubChild from './propsex/SubChild'
+// import CBCStateEx from './stateexample/CBCStateEx'
+import FBCStateEx from './stateexample/FBCStateEx'
 const App = () => {
   return (
-    <PropChildEx num = {1000}>
-      <h1>Hi I am child</h1>
-      <SubChild/>
-    </PropChildEx>
+    <div>
+      {/* <CBCStateEx/> */}
+      <FBCStateEx/>
+    </div>
   )
 }
 

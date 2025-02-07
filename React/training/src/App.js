@@ -96,14 +96,30 @@
 // export default App
 
 //! State examples
+// import React from 'react'
+// // import CBCStateEx from './stateexample/CBCStateEx'
+// import FBCStateEx from './stateexample/FBCStateEx'
+// const App = () => {
+//   return (
+//     <div>
+//       {/* <CBCStateEx/> */}
+//       <FBCStateEx/>
+//     </div>
+//   )
+// }
+
+// export default App
+
 import React from 'react'
-// import CBCStateEx from './stateexample/CBCStateEx'
-import FBCStateEx from './stateexample/FBCStateEx'
+import FunctionalComponent from './components/FunctionalComponent'
+import styles from './myStyle.module.css'
+import "./components/Styles.css"
 const App = () => {
   return (
     <div>
-      {/* <CBCStateEx/> */}
-      <FBCStateEx/>
+    <h1 class="heading">This is on styling class</h1>
+       <h1 class={styles.error}>Error</h1>
+       <FunctionalComponent clgName="MRU" apply={true}/>
     </div>
   )
 }

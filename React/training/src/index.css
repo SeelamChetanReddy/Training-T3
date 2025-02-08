@@ -1,0 +1,77 @@
+/* import React, { Component } from 'react'
+
+export default class MyForm extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            textValue: '',
+            skillValue: ''
+        }
+    }
+    changeMessage = (event) => {
+        this.setState({
+            textValue: event.target.value
+        })
+    }
+    changeSkill = (event) => {
+        this.setState({
+            skillValue: event.target.value
+        })
+    }
+
+    submitted = (event) => {
+        event.preventDefault();
+        alert("form is submitted" + `  ${this.state.textValue} ${this.state.skillValue}`)
+    }
+  render() {
+    return (
+        <div className='container mt-5'>
+        <form onSubmit={this.submitted}>
+            <label>Username:</label>
+            <input type="text" value={this.state.textValue} onChange={this.changeMessage}/>
+
+            <label>Skill</label>
+            <select onChange={this.changeSkill}>
+                <option>HTML</option>
+                <option>java</option>
+                <option>py</option>
+
+            </select>
+            <button type="submit">Submit</button> 
+        </form>
+
+      </div>
+    )
+  }
+} */
+/* create css for this project */
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 5px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 5px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px;
+    width: 30%;
+    margin-bottom: 10px;
+}

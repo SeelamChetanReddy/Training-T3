@@ -110,16 +110,44 @@
 
 // export default App
 
+// import React from 'react'
+// import FunctionalComponent from './components/FunctionalComponent'
+// import styles from './myStyle.module.css'
+// import "./components/Styles.css"
+// const App = () => {
+//   return (
+//     <div>
+//     <h1 class="heading">This is on styling class</h1>
+//        <h1 class={styles.error}>Error</h1>
+//        <FunctionalComponent clgName="MRU" apply={true}/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// import React from 'react'
+// import Assignment from './components/Assignment'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Assignment/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
 import React from 'react'
-import FunctionalComponent from './components/FunctionalComponent'
-import styles from './myStyle.module.css'
-import "./components/Styles.css"
+import MyForm from './components/MyForm'
+
 const App = () => {
   return (
     <div>
-    <h1 class="heading">This is on styling class</h1>
-       <h1 class={styles.error}>Error</h1>
-       <FunctionalComponent clgName="MRU" apply={true}/>
+      <MyForm/>
     </div>
   )
 }

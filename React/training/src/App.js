@@ -141,14 +141,28 @@
 // export default App
 
 
+// import React from 'react'
+// import MyForm from './components/MyForm'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <MyForm/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+//! hooks
+
 import React from 'react'
-import MyForm from './components/MyForm'
+import UseEffectEX from './hookexamples/UseEffectEX'
 
 const App = () => {
   return (
-    <div>
-      <MyForm/>
-    </div>
+    <div><UseEffectEX/></div>
   )
 }
 

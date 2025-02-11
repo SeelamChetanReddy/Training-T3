@@ -17,7 +17,7 @@ const UseEffectEX = () => {
   //     console.log(count);
   //      // document.title = "Training React";
   //     document.title = count;
-  // },[count]);
+  // },[count]);console.log("Component Mounted");console.log("Component Mounted");
   const [users, setUsers] = useState([]);
   console.log(users);
   useEffect(() => {

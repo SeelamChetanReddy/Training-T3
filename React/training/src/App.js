@@ -158,11 +158,18 @@
 //! hooks
 
 import React from 'react'
-import UseEffectEX from './hookexamples/UseEffectEX'
+// import RefExample from './hookexamples/RefExample'
+import Context1 from './hookexamples/Context1'
+import ContextAPI from './hookexamples/ContextAPI'
 
 const App = () => {
   return (
-    <div><UseEffectEX/></div>
+    <div>
+      {/* <RefExample/> */}
+      <ContextAPI>
+        <Context1/>
+      </ContextAPI>
+    </div>
   )
 }
 

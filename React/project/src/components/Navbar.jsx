@@ -1,7 +1,7 @@
 import React from 'react'
-import Logo from './Logo'
-import Menu from './Menu'
-import Styles from './navbar.module.css'
+import Styles from "./navabr.module.css";
+import Logo from './Logo';
+import Menu from './Menu';
 const Navbar = () => {
   return (
     <section id={Styles.navBlock}>

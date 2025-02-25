@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: flex;
+            gap: 10px;
+            /*justify-content: center;
+            align-items: stretch;
+            height: 100vh;*/
+            /*flex-direction: row;*/
+            flex-wrap: wrap-reverse;
+        }
+        .common{
+            height: 200px;
+            width:200px;
+            border: 1px solid grey;
+
+        }
+        .c1{
+            background-color: red;
+            order: 1;
+        }
+        .c2{
+            background-color: blue;
+            order: 2;
+        }
+        .c3{
+            background-color: green;
+            order: 3;
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+    <section class="parent">
+        <section class="common c1">First</section>
+        <section class="common c2">Second</section>
+        <section class="common c3">Third</section>
+
+        <section class="common c1">First</section>
+        <section class="common c2">Second</section>
+        <section class="common c3">Third</section>
+
+        <section class="common c1">First</section>
+        <section class="common c2">Second</section>
+        <section class="common c3">Third</section>
+    </section>
+</body>
+</html>

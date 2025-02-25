@@ -1,32 +1,75 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Dashboard from './pages/Dashboard'
-import Classrooms from './pages/Classrooms';
-import Assessments from './pages/Assessments';
-import Store from './pages/Store';
-import Calendar from './pages/Calendar';
-import News from './pages/News';
-import Blog from './pages/Blog';
-import Pagenotfound from './pages/Pagenotfound'; 
+// import React from 'react'
+// import Navbar from './components/Navbar';
+// import {BrowserRouter  , Routes , Route} from "react-router-dom";
+// import Dashboard from './pages/Dashboard';
+// import Clasroom from './pages/Clasroom';
+// import Assessments from './pages/Assessments';
+// import Store from './pages/Store';
+// import Calender from './pages/Calender';
+// import News from './pages/News';
+// import Blog from './pages/Blog';
+// import PageNotFound from './pages/PageNotFound';
+// import Profile from './pages/Profile';
+// import MyAccount from './pages/MyAccount';
+// import MySettings from './pages/MySettings';
+// const App = () => {
+//   return (
+//     <BrowserRouter>
+//         <Navbar/>
+//         <Routes>
+//             <Route path='/' element={<Dashboard/>}/>
+//             <Route path='/classroom' element={<Clasroom/>}/>
+//             <Route path='/assessment' element={<Assessments/>}/>
+//             <Route path='/store' element={<Store/>}/>
+//             <Route path='/calender' element={<Calender/>}/>
+//             <Route path='/news' element={<News/>}/>
+//             <Route path='/blog' element={<Blog/>}/>
+//             <Route path='/profile' element={<Profile/>}>
+//               <Route path='/myaccount' element={<MyAccount/>}/>
+//               <Route path='/mysettings' element={<MySettings/>}/>
+//             </Route>
+//             <Route path='*' element={<PageNotFound/>}/>
+//         </Routes>
+//     </BrowserRouter>
+//   )
+// }
 
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+// export default App
 
-function App() {
+// import React from 'react'
+// import {BrowserRouter  , Routes , Route} from "react-router-dom";
+// import Home from './crudcomponents/Home';
+// import Create from './crudcomponents/Create';
+// import Edit from './crudcomponents/Edit';
+// import { ToastContainer } from 'react-toastify';
+
+// const App = () => {
+//   return (
+//     <BrowserRouter>
+//     <ToastContainer/>
+//       <Routes>
+//       <Route path='/' element={<Home/>}/>
+//       <Route path='/create' element={<Create/>}/>
+//       <Route path='/edit/:userId' element={<Edit/>}/>
+//       </Routes>
+//     </BrowserRouter>
+//   )
+// }
+
+// export default App
+
+
+import React from 'react'
+import CakeContainer from './reduxcomponenets/cakeContainer'
+import { Provider } from 'react-redux'
+import store from './redux/store'
+const App = () => {
   return (
-    <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Dashboard/>}/>
-        <Route path='/Classrooms' element={<Classrooms/>}/>
-        <Route path='/Assessments' element={<Assessments/>}/>
-        <Route path='/Store' element={<Store/>}/>
-        <Route path='/Calendar' element={<Calendar/>}/>
-        <Route path='/News' element={<News/>}/>
-        <Route path='/Blog' element={<Blog/>}/>
-        <Route path='/*' element={<Pagenotfound/>}/>
-      </Routes>
-    </BrowserRouter>
-  );
+    <Provider store={store}>
+      <CakeContainer/>
+    </Provider>
+  )
 }
 
-export default App;
+
+export default App
